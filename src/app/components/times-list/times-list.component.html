@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row time-row" *ngFor="let time of times" >
+    <div class="col-10">
+      <app-static-timer></app-static-timer>
+      <div class="font">
+        {{time}}
+      </div>
+    </div>
+    <div class="col-2 align-right" >
+      <button type="button" (click)="removeTime(time)" class="btn btn-danger">Remove</button>
+    </div>
+  </div>
+</div>
