@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="timer-container col">
+      <app-static-timer></app-static-timer>
+
+      <div class="font">
+        <span *ngFor="let digit of minutes.split('')">{{digit}}</span> <span class="{{flickClass}}">:</span> <span *ngFor="let digit of seconds.split('')">{{digit}}</span> <span class="{{flickClass}}">.</span> <span *ngFor="let digit of milliseconds.split('')">{{digit}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-md-center buttons">
+    <div class="col-8">
+      <button (click)="toggleTimer()" class="full-width">
+        <fa-icon [icon]="icon"></fa-icon>
+        {{timerToggledText}}
+      </button>
+    </div>
+    <div class="col-2">
+      <button (click)="addTime()" class="full-width"><fa-icon [icon]="faStopwatch"></fa-icon></button>
+    </div>
+    <div class="col-2">
+      <button (click)="ResetTime()" class="full-width"><fa-icon [icon]="faTrashAlt"></fa-icon></button>
+    </div>
+  </div>
+</div>
+
